@@ -17,8 +17,29 @@ Nouns and Verbs:
   
   
 Defining Diagram:
-
-
+  Inputs:
+  skaterName
+  skaterPhone
+  skaterEmail
+  USFSAnumber
+  skaterCoach
+  coachEmail
+  memberType
+  freestyle
+  moves
+  
+  Processing:
+  determine memberType
+  determine number of moves
+  determine number of freestyle
+  
+  calculate total owed
+  
+  Outputs:
+  skaterName
+  numberMoves
+  numberFreestyle
+  total
 
 
 
