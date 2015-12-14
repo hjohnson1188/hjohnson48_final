@@ -58,10 +58,10 @@ function processSecondForm(event){
   //movesCount = Number(movesCount.length);
     
     //determine member type then figure out session costs based on member type
-    if ("clubMember"){
+    if ("clubmember"){
       movesTotal = movesCount * 6.50;
       freeTotal = freeCount * 11.50;  
-    }else if ("otherMember"){
+    }else if ("othermember"){
       movesTotal = movesCount * 7;
       freeTotal = freeCount * 13;
     }else{
