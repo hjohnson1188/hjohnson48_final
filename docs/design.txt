@@ -1,0 +1,149 @@
+Problem statement:
+  Currently at the Eau Claire Figure Skating Club, ice time contracting is done via pencil and paper and snail mail. The goal is to
+  have this done on the computer. The program will be able to input all of the skaters info: their name, parents email address, phone number,
+  USFSA (United States Figure Skating Association) member number, their coaches name and email address. They would then pick what type of member
+  they are. There are two types of members. A "regular" ECFSC member pays $11.50 per freestyle session, and $6.50 per moves session.
+  An Alumni & Collegiate/Summer Associate Member pays $13.00 per freestyle session, and $7.00 per moves session. Once the skater has entered
+  their information, and selected what type of member they are, they will be brought to the available ice times. They will select the
+  ice times they wish to contract for, and once they press submit, it will output them their total number of sessions contracted for
+  and how much they owe. 
+  
+  
+Nouns and Verbs:
+  skater info, type of member, freestyle, moves
+  
+  input, select, output
+  
+  
+  
+Defining Diagram:
+
+
+
+
+
+Pseudocode:
+FormOne
+  initiate skaterName
+  initiate skaterPhone
+  initiate parentsEmail
+  initiate USFSAnumber
+  initiate coachesName
+  initiate coachesEmail
+  initiate memberType 
+END FormOne
+
+FormTwo
+  initiate moves to 0
+  initiate freestyle to 0
+  
+  prompt user to select what ice times they want with a list of ice times
+END FormTwo
+
+IceTimeProcessing
+  Return skaterName
+  Return memberType
+  Return number of moves selected
+  Return number of freestyle selected
+  
+  IF memberType is "ECFSCmember" THEN
+    moves =6.50
+    freestyle = 11.50
+  ELSE IF memberType is "otherMember" THEN
+    moves = 7
+    freestyle = 11
+  ELSE memberType is "null"
+    alert= "You did not select a member type"
+  ENDIF
+  
+  total = (movesSelected * memberTypeRate) + (freestyleSelected * memberTypeRate)
+  
+  output = skaterName + "You have selected: " + movesSelected + "moves sessions. You have selected: " + freestyleSelected + "freestyle sessions. The total amount +
+    you owe is: " + total
+    
+END
+  
+
+
+
+Test Plans:
+
+  Test 1:
+  
+  Inputs: Nora Parkhurst, ECFSC Member, 3 moves and 3 freestyle sessions.
+  
+  Expected output:
+  Nora Parkhurst
+  3 moves sessions
+  3 freestyle sessions
+  Total amount owed is: $54
+  
+  Actual output:
+  Skater Name: Nora Parkhurst
+  Moves Total: 3
+  Moves Total Owed: $19.5
+  Freestyle Total: 3
+  Freestyle Total Owed: $34.5
+  Overall Total Owed: $54
+  Payment is due to Steve Southworth by due date on bill received via email.
+  Please make checks payable to ECFSC.
+  
+  
+  Test 2:
+  
+  Inputs: Nora Parkhurst, Other Member, 10 moves and 10 freestyle sessions.
+  
+  Expected output:
+  Nora Parkhurst
+  10 moves sessions
+  10 freestyle sessions
+  Total amount owed is: $200
+  
+  Actual output:
+  Skater Name: Nora Parkhurst
+  Moves Total: 10
+  Moves Total Owed: $65
+  Freestyle Total: 10
+  Freestyle Total Owed: $115
+  Overall Total Owed: $180
+  Payment is due to Steve Southworth by due date on bill received via email.
+  Please make checks payable to ECFSC.
+  
+  
+  Test 3:
+  
+  Inputs: Nora Parkhurst, No member type selected, 3 moves and 3 freestyle sessions.
+  
+  Expected output:
+  You did not select a member type
+  
+  Actual output:
+  kater Name: Nora Parkhurst
+  Moves Total: 3
+  Moves Total Owed: $19.5
+  Freestyle Total: 3
+  Freestyle Total Owed: $34.5
+  Overall Total Owed: $54
+  Payment is due to Steve Southworth by due date on bill received via email.
+  Please make checks payable to ECFSC.
+  
+  
+  Test 4:
+  
+  Inputs: Nora Parkhurst, ECFSC Member, 15 moves and 7 freestyle sessions.
+  
+  Expected output:
+  Nora Parkhurst
+  15 moves sessions
+  7 freestyle sessions
+  Total amount owed is: $178
+  
+  Actual output:
+  Skater Name: Nora Parkhurst
+  Moves Total: 7
+  Moves Total Owed: $45.5
+  Freestyle Total: 7
+  Freestyle Total Owed: $80.5
+  Overall Total Owed: $126
+  Payment is due to Steve Southworth by due date on bill received via email.
+  Please make checks payable to ECFSC.
